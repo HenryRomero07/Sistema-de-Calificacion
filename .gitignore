@@ -4,6 +4,7 @@ nbproject/
 build/
 build.xml
 manifest.mf
+.vscode/
 
 # Compiled class file
 *.class
