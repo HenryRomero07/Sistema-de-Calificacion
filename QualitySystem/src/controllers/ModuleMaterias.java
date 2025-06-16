@@ -29,7 +29,7 @@ public class ModuleMaterias {
 
                 System.out.print("Ingrese el porcentaje del criterio a evaluar (sin %): ");
                 porcentajes[cantidadMaterias][cantidadCriterios] = sc.nextDouble();
-                sc.nextLine(); // limpiar buffer
+                sc.nextLine(); 
 
                 suma += porcentajes[cantidadMaterias][cantidadCriterios];
 
@@ -56,7 +56,6 @@ public class ModuleMaterias {
             continuarMateria = sc.nextLine();
         }
 
-        // Mostrar resultados
         System.out.println("\n LISTA DE MATERIAS CON SUS CRITERIOS DE EVALUACIÓN ");
         for (int i = 0; i < cantidadMaterias; i++) {
             System.out.println("Materia: " + materias[i]);
