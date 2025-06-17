@@ -25,7 +25,7 @@ public class moduleNotas {
         List<Double> notas = new ArrayList<>();
 
         for (int i = 0; i < MAX_NOTAS; i++) {
-            System.out.print("Ingrese la nota " + (i + 1) + " (o -1 para terminar): ");
+            System.out.print("Ingrese la nota " + (i + 1));
             double nota = scanner.nextDouble();
             if (nota == -1) {
                 break;
@@ -38,7 +38,7 @@ public class moduleNotas {
             }
         }
 
-        scanner.nextLine(); // limpiar buffer
+        scanner.nextLine(); 
         return new EstudianteNotas(nombre, notas);
     }
 
