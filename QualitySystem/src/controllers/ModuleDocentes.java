@@ -18,7 +18,6 @@ import java.util.Scanner;
  * @author Usuario
  */
 public class ModuleDocentes {
-    
     public static void cargarDatos(String archivo, ArrayList<String> lista) {
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
             String linea;
@@ -66,5 +65,6 @@ public class ModuleDocentes {
         }
         return index;
     }
+}
 
 }
