@@ -1,13 +1,11 @@
 package views;
 
-import java.util.List;
-import java.util.Scanner;
 import controllers.moduleNotas;
-public class EjecutorNota {
-public static void main(String[] args) {
+import controllers.moduleNotas.EstudianteNotas;
 
-    Scanner scanner = new Scanner(System.in);
-    moduleNotas.agregarNotasEstudiante();  // Ingresar datos
-        moduleNotas.generarReporte(null, null);          
-}
+public class EjecutorNota {
+    public static void main(String[] args) {
+        EstudianteNotas estudiante = moduleNotas.agregarNotasEstudiante();
+        moduleNotas.generarReporte(estudiante.nombre, estudiante.notas);
+    }
 }
