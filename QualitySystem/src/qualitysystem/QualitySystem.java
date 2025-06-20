@@ -15,4 +15,5 @@ public class QualitySystem {
      */
     public static void main(String[] args) {
     
+    }
 }
