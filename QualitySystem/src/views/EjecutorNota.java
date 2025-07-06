@@ -1,5 +1,5 @@
 package views;
-import controllers.moduleEstudiantes;
+import controllers.modulo_notasEstudiantes;
 
 public class EjecutorNota {
     
