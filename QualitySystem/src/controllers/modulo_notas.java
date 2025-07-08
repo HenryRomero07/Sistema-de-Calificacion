@@ -19,6 +19,7 @@ public class modulo_notas {
     }
 private boolean validacion (float nota){
     return nota >= 0 && nota <= 10;
+    
 }
 
 }
