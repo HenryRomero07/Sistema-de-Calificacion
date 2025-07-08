@@ -1,0 +1,10 @@
+001	Juan Pérez	juan.perez@example.com	Matemáticas	8.5	9.0	7.5	8.33
+002	Ana García	ana.garcia@example.com	Lengua	9.0	8.5	9.5	9.00
+003	Carlos López	carlos.lopez@example.com	Física	7.0	6.5	8.0	7.17
+004	María Rodríguez	maria.rodriguez@example.com	Matemáticas	8.0	8.5	9.0	8.50
+005	Luis Martín	luis.martin@example.com	Química	6.5	7.0	7.5	7.00
+006	Sofia Hernández	sofia.hernandez@example.com	Matemáticas	9.5	9.0	9.0	9.17     
+007	Diego Morales	diego.morales@example.com	Física	8.0	7.5	8.5	8.00
+008	Elena Jiménez	elena.jimenez@example.com	Ingles	9.0	8.0	9.0	8.67
+009	Roberto Castro	roberto.castro@example.com	Ingles	7.5	6.0	7.0	6.83
+010	Lucia Vargas	lucia.vargas@example.com	Matemáticas	8.5	9.0	8.0	8.50
