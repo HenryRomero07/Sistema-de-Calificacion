@@ -1,0 +1,5 @@
+1106086117	Rodolfo Alexander Gallo Guarnizo	juanperez@unl.edu.ec	Sociales	9.00	8.50	9.75
+1106086117	Rodolfo Alexander Gallo Guarnizo	juanperez@unl.edu.ec	Física	        8.45	7.45	8.65
+1106086117	Rodolfo Alexander Gallo Guarnizo	juanperez@unl.edu.ec	Discretas	10.00	9.65	9.85
+1106086117	Rodolfo Alexander Gallo Guarnizo	juanperez@unl.edu.ec	Biología	9.85	8.30	9.85
+1106086117	Rodolfo Alexander Gallo Guarnizo	juanperez@unl.edu.ec	Discretas	10.00	9.65	9.85
