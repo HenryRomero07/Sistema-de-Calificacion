@@ -1,4 +1,4 @@
-package controllers;
+package Controlador_Notas;
 
 public class modulo_notas {
     float Nota1;
