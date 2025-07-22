@@ -62,7 +62,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="85" y="60" width="250" height="50"/>
+              <AbsoluteConstraints x="85" y="60" width="250" height="60"/>
             </Constraint>
           </Constraints>
 
@@ -92,7 +92,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="85" y="120" width="250" height="50"/>
+              <AbsoluteConstraints x="85" y="120" width="250" height="60"/>
             </Constraint>
           </Constraints>
 
@@ -100,10 +100,10 @@
             <Property name="useNullLayout" type="boolean" value="true"/>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="txtcontrase&#xf1;a">
+            <Component class="javax.swing.JPasswordField" name="txtcontrase&#xf1;a">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="5" y="17" width="240" height="30"/>
+                  <AbsoluteConstraints x="7" y="18" width="240" height="30"/>
                 </Constraint>
               </Constraints>
             </Component>

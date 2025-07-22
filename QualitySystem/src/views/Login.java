@@ -5,16 +5,23 @@
 package views;
 
 import javax.swing.JOptionPane;
+import proyectofinal.AREstudiantes;
+import proyectofinal.ARadministrador;
+import proyectofinal.ARdocentes;
 
 import proyectofinal.ControllerLogin;
+import proyectofinal.Verificador;
 
 /**
  *
  * @author franz
  */
 public class Login extends javax.swing.JDialog {
-
+    private AREstudiantes est = new AREstudiantes();
+    private ARdocentes doc = new ARdocentes();
+    private Verificador veri = new Verificador();
     private ControllerLogin ver = new ControllerLogin();
+    private ARadministrador adm = new ARadministrador();
 
     /**
      * Creates new form Login
@@ -22,37 +29,30 @@ public class Login extends javax.swing.JDialog {
     public Login(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        limpiar();
     }
     
-    public void inicioSesion(){
-        if (txtusuario.getText().isEmpty() || txtcontraseña.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Faltan datos");
+    public void inicioSesion() {
+        if (txtusuario.getText().trim().isEmpty() || txtcontraseña.getPassword().length == 0) {
+            JOptionPane.showMessageDialog(null, "Faltan Datos", "Error", JOptionPane.ERROR_MESSAGE);
         } else {
-            switch (ver.verificarUsuarios(txtusuario.getText(), txtcontraseña.getText())) {
-                case 1:
-                    Registro ra = new Registro(null, true);
-                    ra.setVisible(true);
-                    break;
-                case 2:
-                    JOptionPane.showMessageDialog(null, "inicio exitoso", "Mensaje de exito", JOptionPane.INFORMATION_MESSAGE);
-                    limpiar();
-                    //llevar a modulo de estudiante
-                    break;
-                case 3:
-                    JOptionPane.showMessageDialog(null, "inicio exitoso", "Mensaje de exito", JOptionPane.INFORMATION_MESSAGE);
-                    limpiar();
-                    //llevar a modulo de docentes
-                     break;
-                default:
-                    JOptionPane.showMessageDialog(null, "Error contraseña o usuario incorrecto", "Error", JOptionPane.ERROR_MESSAGE);
+            String[] data = ver.verificarcontraseña(txtusuario.getText(), String.valueOf(txtcontraseña.getPassword()));
+            if (data != null) {
+                if (veri.verificarcontraseña(txtusuario.getText(), data[0], adm.listar()) != null) {
+                    System.out.println("ingreso administrador");
+                } else if (veri.verificarcontraseña(txtusuario.getText(), data[0], doc.listar()) != null) {
+                    System.out.println("ingreso docente");
+                } else if (veri.verificarcontraseña(txtusuario.getText(), data[0], est.listar()) != null) {
+                    System.out.println("ingreso estudiante");
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Correo o contraseña incorectos", "Error", JOptionPane.ERROR_MESSAGE);
             }
-            
         }
     }
-    
     public void limpiar(){
         txtusuario.setText("");
-        txtcontraseña.setText("");
+        txtcontraseña.removeAll();
    }
 
     /**
@@ -69,7 +69,7 @@ public class Login extends javax.swing.JDialog {
         jPanel3 = new javax.swing.JPanel();
         txtusuario = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
-        txtcontraseña = new javax.swing.JTextField();
+        txtcontraseña = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -96,15 +96,15 @@ public class Login extends javax.swing.JDialog {
         txtusuario.setBounds(5, 17, 240, 30);
 
         jPanel1.add(jPanel3);
-        jPanel3.setBounds(85, 60, 250, 50);
+        jPanel3.setBounds(85, 60, 250, 60);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Contraseña"));
         jPanel2.setLayout(null);
         jPanel2.add(txtcontraseña);
-        txtcontraseña.setBounds(5, 17, 240, 30);
+        txtcontraseña.setBounds(7, 18, 240, 30);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(85, 120, 250, 50);
+        jPanel2.setBounds(85, 120, 250, 60);
 
         jButton1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jButton1.setText("Iniciar Sesion");
@@ -180,7 +180,7 @@ public class Login extends javax.swing.JDialog {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField txtcontraseña;
+    private javax.swing.JPasswordField txtcontraseña;
     private javax.swing.JTextField txtusuario;
     // End of variables declaration//GEN-END:variables
 }
