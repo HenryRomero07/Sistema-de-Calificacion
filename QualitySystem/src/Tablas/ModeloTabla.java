@@ -1,19 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Tablas;
 
 import javax.swing.table.AbstractTableModel;
 
 /**
  *
- * @author Usuario
+ * @author HenryRomero
  */
 
 public class ModeloTabla extends AbstractTableModel {
     private String[][] data;
-    private String[] columnNames = {"ID", "Nombre", "Unidad 1", "Unidad 2", "Unidad 3", "Promedio Final"};
+    private String[] columnNames = { "Nombre", "Parcial 1", "Parcial 2", "Parcial 3", "Promedio Final"};
 
     public void setData(String[][] data) {
         this.data = data;
