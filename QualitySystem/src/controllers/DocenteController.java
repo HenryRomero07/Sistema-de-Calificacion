@@ -1,6 +1,8 @@
 package controllers;
 
+import utiles.Utiles;
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 /**
  *
@@ -50,16 +52,24 @@ public class DocenteController {
             }
         }
 
-        String[][] filteredData = new String[count][6];
-
+        String[][] filteredData = new String[count][7];
+        
+        DecimalFormat df = new DecimalFormat("#.###");
+        
         int index = 0;
         for (String[] row : allData) {
             if (row[3].equalsIgnoreCase(materia)) {
+                
+                Double unidad1 = Double.parseDouble(row[4]);
+                Double unidad2 = Double.parseDouble(row[5]);
+                Double unidad3 = Double.parseDouble(row[6]);
+                Double promedio = ((unidad1 + unidad2 + unidad3)/3);
+                
                 filteredData[index][0] = row[1]; // Nombres del estudiante
-                filteredData[index][1] = row[3]; // Nota de unidad 1
-                filteredData[index][2] = row[4]; // Nota de unidad 2
-                filteredData[index][3] = row[5]; // Nota de unidad 3
-                filteredData[index][4] = row[6]; // Promedio 
+                filteredData[index][1] = row[4]; // Nota de unidad 1
+                filteredData[index][2] = row[5]; // Nota de unidad 2
+                filteredData[index][3] = row[6]; // Nota de unidad 3
+                filteredData[index][4] =  df.format(promedio); // Promedio 
                 index++;
             }
         }
