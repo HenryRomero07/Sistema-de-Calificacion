@@ -1,5 +1,6 @@
 # Folder for Java projects
 test/
+nbproject/
 build/
 build.xml
 manifest.mf
