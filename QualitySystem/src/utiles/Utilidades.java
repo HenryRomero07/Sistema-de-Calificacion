@@ -2,10 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package controller.utiles;
-
+package utiles;
 import java.io.*;
-
+/**
+ *
+ * @author Usuario iTC
+ */
 public class Utilidades {
     public String [][ ] listAll(String fileName) throws IOException {
         int lineCount = 0;
@@ -26,3 +28,4 @@ public class Utilidades {
         return datos;
     }
 }
+

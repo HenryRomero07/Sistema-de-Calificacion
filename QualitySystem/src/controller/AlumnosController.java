@@ -4,7 +4,7 @@
  */
 package controller;
 
-import controller.utiles.Utilidades;
+import utiles.Utilidades;
 public class AlumnosController {
     private Utilidades util = new Utilidades();
     private String archivo = "src/data/notas_estudiantes.txt";
