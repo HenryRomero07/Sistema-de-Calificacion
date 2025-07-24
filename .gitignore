@@ -2,12 +2,10 @@
 test/
 build/
 build.xml
+nbproject/
 manifest.mf
 .vscode/
 
-nbproject/private/
-nbproject/private.properties
-nbproject/private.xml
 
 
 # Compiled class file
